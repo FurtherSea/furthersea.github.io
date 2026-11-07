@@ -1,0 +1,79 @@
+:root {
+  color-scheme: light dark;
+  --background: #F4F2E8;
+  --text: #2A2B1F;
+  --text-secondary: #66665A;
+  --primary: #536F30;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #13140E;
+    --text: #EEEEDF;
+    --text-secondary: #ABAB98;
+    --primary: #A9C77F;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 24px 20px;
+  background: var(--background);
+  color: var(--text);
+  font-family: ui-rounded, "SF Pro Rounded", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* A little above the middle, where the eye takes the middle to be. */
+main {
+  padding-bottom: 10vh;
+}
+
+h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+p {
+  margin: 8px 0 0;
+  color: var(--text-secondary);
+}
+
+nav {
+  margin-top: 8px;
+}
+
+a {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  min-height: 44px;
+  padding: 0 8px;
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
