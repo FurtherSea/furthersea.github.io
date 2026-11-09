@@ -3,6 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+// Shiso's site was at /mise-homepage/ until November 2026, and copies of the app already installed still open its pages
+// there. Send any such address to the same page under /shiso/, with its query and fragment. Every other path stays a 404.
+(function () {
+  var old = /^\/mise-homepage(?=\/|$)/;
+  if (old.test(location.pathname)) location.replace(location.pathname.replace(old, "/shiso") + location.search + location.hash);
+})();
+</script>
 <title>Page not found · FurtherSea</title>
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#F4F2E8" media="(prefers-color-scheme: light)">
@@ -14,7 +22,8 @@
 <main>
   <h1>Page not found</h1>
   <p>This page doesn’t exist. <span lang="zh-Hans">这一页不存在。</span></p>
-  <nav aria-label="Projects"><a href="/mise-homepage/">Mise: Kitchen and Meal Planner / <span lang="zh-Hans">食序</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 5.5 16 12l-6.5 6.5"/></svg></a></nav>
+  <noscript><p>Shiso is now at <a href="/shiso/">furthersea.org/shiso</a>. <span lang="zh-Hans">食序的网址已改为 furthersea.org/shiso。</span></p></noscript>
+  <nav aria-label="Projects"><a href="/shiso/">Shiso / <span lang="zh-Hans">食序</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 5.5 16 12l-6.5 6.5"/></svg></a></nav>
 </main>
 </body>
 </html>
