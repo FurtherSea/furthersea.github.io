@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["CH83X89C6W.com.junhao.mise"],
+        "components": [
+          { "/": "/shiso/r/*" },
+          { "/": "/shiso/r" }
+        ]
+      }
+    ]
+  }
+}
